@@ -1,6 +1,6 @@
 /* tableEXO */
 let list = document.getElementById('liste');
-let tab = ['Bob', 'Julien', 'Roger'];
+let tab = ['Bob', 'John', 'Will'];
 let text = document.getElementById('texte');
 let alertBox = document.getElementById('errorAlert');
 
