@@ -3,7 +3,7 @@ let tableExoBtn = document.getElementById("tableExoBtn");
 let tableExoBtn2 = document.getElementById("tableExoBtn2");
 let tableExo = document.getElementById("tableExo");
 let tableExo2 = document.getElementById("tableExo2");
-let link = document.getElementsByClassName("link");
+let links = document.getElementById("links");
 let alertBox = document.getElementById('errorAlert');
 let alertBox2 = document.getElementById('errorAlert2');
 
@@ -16,10 +16,12 @@ let alert2 = (str) => {
 }
 
 function mobileMenu() {
-    if (link.classList.contains("hidden")) {
-        link.classList.remove("hidden");
-    } else {
-        link.classList.add("hidden");
+    for (let i = 0; i < links.children.length; i++) {
+        if (links.children[i].classList.contains("hidden")) {
+            links.children[i].classList.remove("hidden");
+        } else {
+            links.children[i].classList.add("hidden");
+        }
     }
 }
 
