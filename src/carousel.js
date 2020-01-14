@@ -41,7 +41,7 @@ function prev() {
 }
 
 function addCase() {
-    carousel.innerHTML += `<li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Case ${carousel.children.length + 1}</li>`;
+    carousel.innerHTML += `<li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Block ${carousel.children.length + 1}</li>`;
     infoCarousel.innerHTML = `<span class="text-white font-bold">La case ${carousel.children.length} a bien été ajoutée !</span>`
     setTimeout(function () {
         infoCarousel.innerHTML = ""
