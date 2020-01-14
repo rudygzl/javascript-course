@@ -2,7 +2,9 @@
 
 ## This is most of my WIP javascript tests/projects. CSS Framework = TailwindCSS
 
-<span style='color:red'>You can use this project to group your courses, tests, projects into one only responsive website using tailwindCSS framework. There is 2 courses by default atm (Table and Carousel).</span> 
+```diff
+- You can use this project to group your courses, tests, projects into one only responsive website using tailwindCSS framework. There is 2 courses by default a (Table and Carousel).
+```
 
 ### Tutorial to import TailwindCSS to my project =
 
