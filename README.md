@@ -15,19 +15,19 @@
 - In "**scripts**" section in the package.json file, type = `"build:css": "tailwind build src/style.css -o dist/style.css"` (including double quotes)
 - Type **npm install tailwindcss** if you want the build script to work (that will install all tailwindcss node modules)
 - Type **npx tailwind init** to generate **tailwind.config.js** file
-- (This will help center the container) Replace **tailwind.config.js** file content by 
+- (This will help center the container) Replace **tailwind.config.js** file content by
 
 ```javascript
 module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem'
+      padding: "2rem"
     }
   },
   variants: {},
   plugins: []
-}
+};
 ```
 
 ### That should be it! If you want to run the build script after some customizations in the tailwind.config.js or @apply customs in src/style.css stylesheet, then type **npm run build:css**
