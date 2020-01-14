@@ -13,7 +13,7 @@
 - Type **npx tailwind init** to generate **tailwind.config.js** file
 - (This will help center the container) Replace **tailwind.config.js** file content by 
 
-```
+```javascript
 module.exports = {
   theme: {
     container: {
