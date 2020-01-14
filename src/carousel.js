@@ -60,7 +60,7 @@ function removeCase() {
         }, 2000);
     } else {
         infoCarousel.innerHTML = `<span class="text-white font-bold">Il doit rester au moins une case</span>`
-        carousel.innerHTML = `<li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Case 1</li>`;
+        carousel.innerHTML = `<li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Block 1</li>`;
     }
 }
 suivant.onclick = next;
