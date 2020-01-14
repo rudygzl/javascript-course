@@ -2,7 +2,6 @@
 let list = document.getElementById('liste');
 let tab = ['Bob', 'John', 'Will'];
 let text = document.getElementById('texte');
-let alertBox = document.getElementById('errorAlert');
 
 text.addEventListener("keyup", event => {
     event.preventDefault();
@@ -32,10 +31,6 @@ function isEmptyOrSpaces(str) {
     return str === null || str.match(/^ *$/) !== null;
 }
 
-let alert = (str) => {
-    alertBox.innerHTML = `<span>${str}</span>`;
-}
-
 let select = (e) => {
     e.target.classList.toggle("bg-blue-200");
 }
@@ -46,7 +41,10 @@ let addUser = () => {
     let user = document.getElementById('texte').value;
     if (isEmptyOrSpaces(user)) {
         alertBox.classList.remove("hidden");
-        alert("Vous ne pouvez pas rentrer de caractères vides")
+        alert("Vous ne pouvez pas rentrer de caractères vides");
+        setTimeout(function () {
+            alertBox.classList.add("hidden");
+        }, 3000);
     } else {
         tab.push(user);
         list.innerHTML = "";

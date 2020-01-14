@@ -59,7 +59,11 @@ function removeCase() {
             infoCarousel.innerHTML = ""
         }, 2000);
     } else {
-        infoCarousel.innerHTML = `<span class="text-white font-bold">Il doit rester au moins une case</span>`
+        alertBox2.classList.remove("hidden");
+        alert2("Il doit rester au moins une case");
+        setTimeout(function () {
+            alertBox2.classList.add("hidden");
+        }, 3000);
         carousel.innerHTML = `<li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Block 1</li>`;
     }
 }
