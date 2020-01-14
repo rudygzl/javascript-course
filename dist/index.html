@@ -14,11 +14,11 @@
     <div class="flex flex-shrink-0">
       <span class="text-white font-semibold text-2xl tracking-tight"><a href="#">rudygzl.</a></span>
     </div>
-    <div class="ml-5 w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-md lg:flex-grow">
-        <a href="#" class="link nav-links lg:block lg:inline-block">Home</a>
-        <a href="#" class="link nav-links lg:block lg:inline-block">Discover</a>
-        <a href="#" class="link nav-links lg:block lg:inline-block">Projects</a>
+    <div class="ml-5 w-full lg:block lg:flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-md w-3/6 lg:flex-grow">
+        <a href="#" class="hidden nav-links lg:block lg:inline-block">Home</a>
+        <a href="#" class="hidden nav-links lg:block lg:inline-block">Discover</a>
+        <a href="#" class="hidden nav-links lg:block lg:inline-block">Projects</a>
       </div>
       <div>
         <a target="_blank" href="https://www.linkedin.com/in/rudygzl/"
@@ -37,6 +37,15 @@
       </div>
     </div>
   </nav>
+  <div id="links">
+    <div class="hidden lg:hidden flex w-full bg-blue-800 p-5 border border-blue-500 border-l-none border-r-none border-b-none static">
+      <div class="flex justify-around text-md w-full lg:hidden">
+        <a href="#" class="nav-links lg:block lg:inline-block">Home</a>
+        <a href="#" class="nav-links lg:block lg:inline-block">Discover</a>
+        <a href="#" class="nav-links lg:block lg:inline-block">Projects</a>
+      </div>
+    </div>
+  </div>
   <div class="container mt-4">
     <button id="tableExoBtn" onclick="shown(tableExo)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Table</button>
     <button id="tableExoBtn2" onclick="shown(tableExo2)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Carousel</button>
@@ -82,9 +91,9 @@
     </div>
     <div class="flex justify-center mx-auto mt-5" id="infoCarousel"></div>
     <div id="errorAlert2"
-            class="hidden block border flex flex-wrap border-red-800 mt-5 bg-red-200 mx-auto w-2/5 py-4 rounded text-red-800 px-5 shadow-lg">
-          </div>
-</div>
+      class="hidden block border flex flex-wrap border-red-800 mt-5 bg-red-200 mx-auto w-2/5 py-4 rounded text-red-800 px-5 shadow-lg">
+    </div>
+  </div>
   </div>
   <script src="../src/main.js"></script>
   <script src="../src/table.js"></script>

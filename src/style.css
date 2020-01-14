@@ -52,7 +52,7 @@
 }
 
 .nav-links {
-    @apply hidden font-semibold text-white ml-5
+    @apply font-semibold text-white ml-5
 }
 
 .noselect {
@@ -98,4 +98,20 @@
 
 .wavy-blue {
     text-decoration: underline wavy #2b6cb0;
+}
+
+.border-b-none {
+    border-bottom: none;
+}
+
+.border-t-none {
+    border-top: none;
+}
+
+.border-r-none {
+    border-right: none;
+}
+
+.border-l-none {
+    border-left: none;
 }
