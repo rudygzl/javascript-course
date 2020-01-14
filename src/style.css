@@ -92,10 +92,10 @@
 }
 
 #carousel li:nth-child(even) {
-    background-color: rgb(56, 69, 255);
+    background-color: #2b6cb0;
     color: black;
 }
 
 .wavy-blue {
-    text-decoration: underline wavy rgb(0, 95, 158);
+    text-decoration: underline wavy #2b6cb0;
 }
