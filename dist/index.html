@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Javascript Course</title>
-  </head>
-  <body class="bg-blue-700">
-    <nav class="flex w-full bg-blue-900 p-5 static">
-      <div class="flex flex-shrink-0">
-        <span class="text-white font-semibold text-2xl tracking-tight"
-          >JS.</span
-        >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Javascript Course</title>
+</head>
+
+<body class="bg-blue-700">
+  <nav class="flex w-full bg-blue-900 p-5 static">
+    <div class="flex flex-shrink-0">
+      <span class="text-white font-semibold text-2xl tracking-tight"><a href="#">rudygzl.</a></span>
+    </div>
+    <div class="ml-5 w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-md lg:flex-grow">
+        <a href="#" class="link nav-links lg:block lg:inline-block">Home</a>
+        <a href="#" class="link nav-links lg:block lg:inline-block">Discover</a>
+        <a href="#" class="link nav-links lg:block lg:inline-block">Projects</a>
       </div>
-      <div
-        class="ml-5 w-full block flex-grow lg:flex lg:items-center lg:w-auto"
-      >
-        <div class="text-md lg:flex-grow">
-          <a href="#" class="nav-links lg:block lg:inline-block">Home</a>
-          <a href="#" class="nav-links lg:block lg:inline-block">Discover</a>
-          <a href="#" class="nav-links lg:block lg:inline-block">Projects</a>
-        </div>
-        <div>
-          <a
-            href="#"
-            class="hidden lg:inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:font-semibold hover:text-blue-500 hover:bg-white mt-4 lg:mt-0"
-            >LinkedIn</a
-          >
-          <a
-            href="#"
-            class="hidden lg:inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:font-semibold hover:text-blue-500 hover:bg-white mt-4 lg:mt-0"
-            >GitHub</a
-          >
-        </div>
-        <div class="block lg:hidden">
-          <button
-            class="flex inline-block items-center float-right px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white focus:outline-none"
-          >
-            <svg
-              class="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div>
+      <div>
+        <a target="_blank" href="https://www.linkedin.com/in/rudygzl/"
+          class="hidden lg:inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:font-semibold hover:text-blue-500 hover:bg-white mt-4 lg:mt-0 link">LinkedIn</a>
+        <a target="_blank" href="https://github.com/rudygzl/"
+          class="hidden lg:inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:font-semibold hover:text-blue-500 hover:bg-white mt-4 lg:mt-0 link">GitHub</a>
       </div>
-    </nav>
-    <div class="container mt-4">
-      <div class="flex justify-center mx-auto">
-        <button id="ajouter" onclick="addUser();" class="btn btn-blue mx-4">
+      <div class="block lg:hidden">
+        <button
+          onclick="mobileMenu();" class="flex inline-block items-center float-right px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white focus:outline-none">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    <button id="tableExoBtn" onclick="shown(tableExo)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Tableau</button>
+    <button id="tableExoBtn2" onclick="shown(tableExo2)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Carousel</button>
+    <div id="tableExo" class="hidden">
+      <div class="flex justify-center mx-auto mt-5">
+        <button id="ajouter" onclick="addUser(); inputClear();" class="btn btn-blue mx-4">
           Ajouter
         </button>
         <button onclick="removeUser();" id="annuler" class="btn btn-red mx-4">
           Annuler
         </button>
+        <button onclick="suppr()" id="supprimer" class="btn btn-red mx-4">
+          Supprimer Selection
+        </button>
+        <button onclick="refresh()" class="btn btn-green mx-4">Refresh</button>
       </div>
       <div class="bg-white h-auto rounded relative my-5 shadow-xl p-5">
-        <h4 class="flex justify-center text-2xl font-bold">Formulaire</h4>
+        <h4 class="flex justify-center text-2xl font-bold text-blue-800">Formulaire</h4>
         <div class="w-12/12 flex flex-wrap justify-center">
-          <input class="p-1 rounded border border-red-900 h-full" id="texte" />
-          <ul
-            id="liste"
-            class="flex flex-wrap w-full justify-center font-bold mt-4"
-          ></ul>
+          <input class="p-1 rounded border border-blue-900 h-full" id="texte" />
+          <ul id="liste" class="flex flex-wrap w-full justify-center font-bold mt-4"></ul>
+          <div id="errorAlert"
+            class="hidden block border flex flex-wrap border-red-800 mt-5 bg-red-200 w-auto py-4 rounded text-red-800 px-5">
+          </div>
         </div>
       </div>
     </div>
-    <script src="../src/main.js"></script>
-  </body>
+    <div id="tableExo2" class="hidden">
+      <div class="flex justify-center mx-auto mt-5">
+        <button class="btn btn-blue mx-4" id="precedent"><</button>
+        <ul id="carousel" class="w-48 h-40 border border-black px-0 py-0">
+          <li class="inline-block border-box p-2 w-full h-full">Case 1</li>
+          <li class="inline-block border-box p-2 w-full h-full">Case 2</li>
+          <li class="inline-block border-box p-2 w-full h-full">Case 3</li>
+          <li class="inline-block border-box p-2 w-full h-full">Case 4</li>
+        </ul>
+        <button class="btn btn-blue mx-4" id="suivant">></button>
+      </div>
+    </div>
+  </div>
+  <script src="../src/main.js"></script>
+  <script src="../src/carousel.js"></script>
+  <script src="../src/table.js"></script>
+</body>
+
 </html>

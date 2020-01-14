@@ -11433,12 +11433,58 @@ video {
   color: #9b2c2c
 }
 
+.btn-green {
+  background-color: #276749
+}
+
+.btn-green:hover {
+  background-color: #fff;
+  color: #276749
+}
+
 .nav-links {
   display: none;
   font-weight: 600;
   color: #fff;
   margin-left: 1.25rem
 }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                        supported by Chrome, Opera and Firefox */
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+#carousel {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#carousel li:nth-child(odd) {
+  background-color: #f88;
+}
+
+#carousel li:nth-child(even) {
+  background-color: #8f8;
+}
+
 
 @media (min-width: 640px) {
   .sm\:sr-only {
@@ -22213,6 +22259,14 @@ video {
 
   .sm\:z-auto {
     z-index: auto;
+  }
+
+  .sm\:border-box {
+    box-sizing: border-box;
+  }
+
+  .sm\:content-box {
+    box-sizing: content-box;
   }
 }
 
@@ -32990,6 +33044,14 @@ video {
   .md\:z-auto {
     z-index: auto;
   }
+
+  .md\:border-box {
+    box-sizing: border-box;
+  }
+
+  .md\:content-box {
+    box-sizing: content-box;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -43766,6 +43828,14 @@ video {
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:border-box {
+    box-sizing: border-box;
+  }
+
+  .lg\:content-box {
+    box-sizing: content-box;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -54541,5 +54611,13 @@ video {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:border-box {
+    box-sizing: border-box;
+  }
+
+  .xl\:content-box {
+    box-sizing: content-box;
   }
 }

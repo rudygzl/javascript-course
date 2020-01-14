@@ -24,6 +24,53 @@
     @apply bg-white text-red-800
 }
 
+.btn-green {
+    @apply bg-green-800
+}
+
+.btn-green:hover {
+    @apply bg-white text-green-800
+}
+
 .nav-links {
     @apply hidden font-semibold text-white ml-5
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                        supported by Chrome, Opera and Firefox */
+}
+
+@responsive {
+    .border-box {
+        box-sizing: border-box;
+    }
+
+    .content-box {
+        box-sizing: content-box;
+    }
+}
+
+#carousel {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#carousel li:nth-child(odd) {
+    background-color: #f88;
+}
+
+#carousel li:nth-child(even) {
+    background-color: #8f8;
 }
