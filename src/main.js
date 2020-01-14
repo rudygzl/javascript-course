@@ -1,32 +1,22 @@
-let list = document.getElementById('liste');
-let tab = ['Bob', 'Julien', 'Roger'];
-let text = document.getElementById("texte")
+/* GLOBAL */
+let tableExoBtn = document.getElementById("tableExoBtn");
+let tableExoBtn2 = document.getElementById("tableExoBtn2");
+let tableExo = document.getElementById("tableExo");
+let tableExo2 = document.getElementById("tableExo2");
+let link = document.getElementsByClassName("link");
 
-text.addEventListener("keyup", event => {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("ajouter").click();
-        text.value = "";
+function mobileMenu () {
+    if (link.classList.contains("hidden")) {
+        link.classList.remove("hidden");
+    } else {
+        link.classList.add("hidden");
     }
-});
-
-let afficherListe = () => {
-    tab.forEach((li) => {
-        list.innerHTML += `<li class="mx-2">${li}</li>`;
-    });
 }
 
-let addUser = () => {
-    let user = document.getElementById('texte').value;
-    tab.push(user);
-    list.innerHTML = "";
-    afficherListe();
+function shown(str) {
+    if (str.classList.contains("hidden")) {
+        str.classList.remove("hidden");
+    } else {
+        str.classList.add("hidden");
+    }
 }
-
-let removeUser = () => {
-    tab.pop();
-    list.innerHTML = "";
-    afficherListe();
-}
-
-afficherListe();
