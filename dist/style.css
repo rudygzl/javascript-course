@@ -11412,7 +11412,42 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem
+  padding-bottom: 0.5rem;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                        supported by Chrome, Opera and Firefox */
+  -webkit-transition: background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear, -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear, -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
+  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear, -webkit-transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-position: -60px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-position: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn:focus {
+  outline: 0;
 }
 
 .btn-blue {
@@ -11421,7 +11456,7 @@ video {
 
 .btn-blue:hover {
   background-color: #fff;
-  color: #2c5282
+  color: #2c5282;
 }
 
 .btn-red {
@@ -11478,13 +11513,19 @@ video {
 }
 
 #carousel li:nth-child(odd) {
-  background-color: #f88;
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 #carousel li:nth-child(even) {
-  background-color: #8f8;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
+.wavy-blue {
+  -webkit-text-decoration: underline wavy rgb(0, 95, 158);
+          text-decoration: underline wavy rgb(0, 95, 158);
+}
 
 @media (min-width: 640px) {
   .sm\:sr-only {

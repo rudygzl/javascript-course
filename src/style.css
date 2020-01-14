@@ -4,8 +4,27 @@
 
 @tailwind utilities;
 
+
 .btn {
-    @apply text-white font-semibold rounded px-4 py-2
+    @apply text-white font-semibold rounded px-4 py-2 noselect;
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn:active {
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn:focus {
+    outline: 0;
 }
 
 .btn-blue {
@@ -13,7 +32,7 @@
 }
 
 .btn-blue:hover {
-    @apply bg-white text-blue-800
+    @apply bg-white text-blue-800;
 }
 
 .btn-red {
@@ -68,9 +87,15 @@
 }
 
 #carousel li:nth-child(odd) {
-    background-color: #f88;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 #carousel li:nth-child(even) {
-    background-color: #8f8;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.wavy-blue {
+    text-decoration: underline wavy rgb(0, 95, 158);
 }

@@ -1,7 +1,8 @@
 /* tableEXO */
 let list = document.getElementById('liste');
 let tab = ['Bob', 'Julien', 'Roger'];
-let text = document.getElementById("texte")
+let text = document.getElementById('texte');
+let alertBox = document.getElementById('errorAlert');
 
 text.addEventListener("keyup", event => {
     event.preventDefault();
@@ -10,8 +11,6 @@ text.addEventListener("keyup", event => {
         text.value = "";
     }
 });
-
-let alertBox = document.getElementById("errorAlert");
 
 function inputClear() {
     text.value = "";
@@ -32,8 +31,9 @@ let afficherListe = () => {
 function isEmptyOrSpaces(str) {
     return str === null || str.match(/^ *$/) !== null;
 }
+
 let alert = (str) => {
-    alertBox.innerHTML = `<span>${str}</span>`
+    alertBox.innerHTML = `<span>${str}</span>`;
 }
 
 let select = (e) => {

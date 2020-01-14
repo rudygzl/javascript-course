@@ -27,8 +27,8 @@
           class="hidden lg:inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:font-semibold hover:text-blue-500 hover:bg-white mt-4 lg:mt-0 link">GitHub</a>
       </div>
       <div class="block lg:hidden">
-        <button
-          onclick="mobileMenu();" class="flex inline-block items-center float-right px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white focus:outline-none">
+        <button onclick="mobileMenu();"
+          class="flex inline-block items-center float-right px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white focus:outline-none">
           <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -65,17 +65,23 @@
       </div>
     </div>
     <div id="tableExo2" class="hidden">
+      <div class="flex justify-center mx-auto mt-5"><button class="btn btn-blue mx-4 w-1/12" onclick="addCase()"
+          id="addCase">+</button></div>
       <div class="flex justify-center mx-auto mt-5">
-        <button class="btn btn-blue mx-4" id="precedent"><</button>
-        <ul id="carousel" class="w-48 h-40 border border-black px-0 py-0">
-          <li class="inline-block border-box p-2 w-full h-full">Case 1</li>
-          <li class="inline-block border-box p-2 w-full h-full">Case 2</li>
-          <li class="inline-block border-box p-2 w-full h-full">Case 3</li>
-          <li class="inline-block border-box p-2 w-full h-full">Case 4</li>
-        </ul>
-        <button class="btn btn-blue mx-4" id="suivant">></button>
+        <button class="btn btn-blue mx-4 noselect" id="precedent">
+          <</button> <ul id="carousel" class="w-48 h-40 border border-black px-0 py-0">
+            <li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Case 1</li>
+            <li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Case 2</li>
+            <li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Case 3</li>
+            <li class="inline-block border-box p-2 w-full h-full font-semibold flex justify-center">Case 4</li>
+            </ul>
+            <button class="btn btn-blue mx-4 noselect" id="suivant">></button>
       </div>
+      <div class="flex justify-center mx-auto mt-5"><button class="btn btn-blue mx-4 w-1/12" onclick="removeCase()"
+          id="removeCase">-</button></div>
     </div>
+    <div class="flex justify-center mx-auto mt-5" id="infoCarousel"></div>
+</div>
   </div>
   <script src="../src/main.js"></script>
   <script src="../src/carousel.js"></script>
