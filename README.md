@@ -3,7 +3,7 @@
 ## This is most of my WIP javascript tests/projects. CSS Framework = TailwindCSS
 
 ```diff
-- You can use this project to group your courses, tests, projects into one only responsive website using tailwindCSS framework. There is 3 courses by default (Table, Carousel, Noughts and Crosses).
+- You can use this project to group your courses, tests, projects into one only responsive website using tailwindCSS framework. There is 4 courses by default (Table, Carousel, Contact and Noughts and Crosses ).
 ```
 
 ### Tutorial to import TailwindCSS to my project =

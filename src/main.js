@@ -8,9 +8,11 @@ let tableExo3 = document.getElementById("tableExo3");
 let links = document.getElementById("links");
 let alertBox = document.getElementById('errorAlert');
 let alertBox2 = document.getElementById('errorAlert2');
+let alertBox3 = document.getElementById('errorAlert3');
 let nomInput = document.getElementById('nomInput');
 let prenomInput = document.getElementById('prenomInput');
 let numeroInput = document.getElementById('numeroInput');
+let addUserBtn = document.getElementById('addUserBtn');
 let game = document.getElementById('jeu');
 
 let error = (str) => {
@@ -19,6 +21,10 @@ let error = (str) => {
 
 let error2 = (str) => {
     alertBox2.innerHTML = `<span>${str}</span>`;
+}
+
+let error3 = (str) => {
+    alertBox3.innerHTML = `<span>${str}</span>`;
 }
 
 function mobileMenu() {

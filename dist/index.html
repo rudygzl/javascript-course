@@ -47,10 +47,13 @@
     </div>
   </div>
   <div class="container mt-4">
-    <button id="tableExoBtn" onclick="shown(tableExo)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Table</button>
-    <button id="tableExoBtn2" onclick="shown(tableExo2)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Carousel</button>
-    <button id="tableExoBtn3" onclick="shown(tableExo3)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Contact</button>
-    <button id="tableExoBtn4" onclick="shown(tableExo4)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Noughts and Crosses</button>
+    <button id="tableExoBtn" onclick="shown(tableExo)" class="btn btn-blue mx-4 w-5/12 mt-5 md:w-auto">Table</button>
+    <button id="tableExoBtn2" onclick="shown(tableExo2)"
+      class="btn btn-blue mx-4 w-5/12 mt-5 md:mt-0 md:w-auto">Carousel</button>
+    <button id="tableExoBtn3" onclick="shown(tableExo3)"
+      class="btn btn-blue mx-4 w-5/12 mt-5 md:mt-0 md:w-auto">Contact</button>
+    <button id="tableExoBtn4" onclick="shown(tableExo4)"
+      class="btn btn-blue mx-4 w-5/12  mt-5 md:mt-0 md:w-auto">Noughts and Crosses</button>
     <div id="tableExo" class="hidden">
       <div class="flex justify-center mx-auto mt-5">
         <button id="ajouter" onclick="addUser(); inputClear();" class="btn btn-blue mx-4">
@@ -96,35 +99,66 @@
       </div>
     </div>
     <div id="tableExo3" class="hidden">
-      <div class="flex justify-center mx-auto mt-5"><input class="p-1 rounded border border-blue-900 h-full"
-          id="nomInput" placeholder="nom" /><input class="p-1 rounded border border-blue-900 h-full" id="prenomInput"
-          placeholder="prenom" /><input class="p-1 rounded border border-blue-900 h-full" id="numeroInput"
-          placeholder="numero" /></div><button class="btn btn-blue mx-4 noselect" onclick="addFriend()">Add</button>
+      <div class="shadow-xl bg-white rounded-lg px-10 py-10 mt-10">
+        <div class="w-auto">
+          <div class="flex justify-center mx-auto mt-5">
+            <button id="addUserBtn" class="flex flex-wrap justify-center w-auto btn btn-blue mx-4 noselect"
+              onclick="addFriend()">Add</button><input
+              class="flex flex-wrap p-1 w-4/12 rounded border border-blue-900 mx-4" id="nomInput"
+              placeholder="Last Name" /><input class="flex flex-wrap p-1 w-4/12 rounded border border-blue-900 mx-4"
+              id="prenomInput" placeholder="First Name" /><input
+              class="flex flex-wrap p-1 w-4/12 rounded border border-blue-900 mx-4" id="numeroInput"
+              placeholder="Number" />
+          </div>
+        </div>
+        <div class="w-auto">
+          <div id="infoContact" class="flex flex-wrap inline-block justify-center"></div>
+          <div id="errorAlert3"
+            class="hidden block border flex flex-wrap border-red-800 mt-5 bg-red-200 py-4 rounded text-red-800 shadow-lg px-5">
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-5"><button id="search" class="flex flex-wrap btn btn-green">Search</button><input class="flex flex-wrap p-1 rounded border border-blue-900 mx-4" id="searchInput"
+        placeholder="Search" /></div>
+        <div id="resultatRecherche" class="flex justify-center"></div>
     </div>
     <div id="tableExo4" class="hidden">
+      <button onclick="resetNoughts()" class="w-full mx-auto btn btn-blue mt-5">Reset</button>
       <div id="jeu" class="flex justify-center mx-auto mt-5">
-          <div class="w-4/12"> <!--Première Colonne--> 
-          <div id="x1y1" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Première Ligne--> 
-          <div id="x1y2" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Deuxième Ligne-->
-          <div id="x1y3" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Troisième ligne-->
+        <div class="w-4/12">
+          <!--Première Colonne-->
+          <div id="x1y1" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Première Ligne-->
+          <div id="x1y2" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Deuxième Ligne-->
+          <div id="x1y3" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Troisième ligne-->
         </div>
-        <div class="w-4/12"> <!--Deuxième Colonne--> 
-          <div id="x2y1" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Première Ligne--> 
-          <div id="x2y2" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Deuxième Ligne--> 
-          <div id="x2y3" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Troisième Ligne--> 
+        <div class="w-4/12">
+          <!--Deuxième Colonne-->
+          <div id="x2y1" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Première Ligne-->
+          <div id="x2y2" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Deuxième Ligne-->
+          <div id="x2y3" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Troisième Ligne-->
         </div>
-        <div class="w-4/12"> <!--Troisième Colonne--> 
-          <div id="x3y1" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Première Ligne--> 
-          <div id="x3y2" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Deuxième Ligne--> 
-          <div id="x3y3" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Troisième Ligne--> 
+        <div class="w-4/12">
+          <!--Troisième Colonne-->
+          <div id="x3y1" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Première Ligne-->
+          <div id="x3y2" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Deuxième Ligne-->
+          <div id="x3y3" class="game flex flex-wrap border border-black bg-blue-800 h-56 text-center"></div>
+          <!--Troisième Ligne-->
+        </div>
       </div>
     </div>
-  </div>
-  <script src="../src/main.js"></script>
-  <script src="../src/table.js"></script>
-  <script src="../src/carousel.js"></script>
-  <script src="../src/contact.js"></script>
-  <script src="../src/morpion.js"></script>
+    <script src="../src/main.js"></script>
+    <script src="../src/table.js"></script>
+    <script src="../src/carousel.js"></script>
+    <script src="../src/contact.js"></script>
+    <script src="../src/morpion.js"></script>
 </body>
 
 </html>
