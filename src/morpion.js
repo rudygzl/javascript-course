@@ -10,19 +10,22 @@ function isOdd(num) {
 }
 
 function selectGameDiv(e) {
-    turn++
+    if (!e.target.classList.contains("player1") && !e.target.classList.contains("player2")) {
+        turn++
+    }
     if (isOdd(turn)) {
         e.target.classList.remove("bg-blue-800");
         if (!e.target.classList.contains("player2")) {
             e.target.classList.add("bg-red-500", "player1");
+            e.target.innerHTML = "X";
         }
     } else {
         e.target.classList.remove("bg-blue-800");
         if (!e.target.classList.contains("player1")) {
             e.target.classList.add("bg-green-500", "player2");
+            e.target.innerHTML = "O";
         }
     }
-
 
     let x1y1player1 = document.getElementById("x1y1").classList.contains("player1");
     let x1y2player1 = document.getElementById("x1y2").classList.contains("player1");
@@ -137,7 +140,6 @@ function selectGameDiv(e) {
             }, 10);
         }
     }
-
 }
 
 game.onclick = selectGameDiv;
