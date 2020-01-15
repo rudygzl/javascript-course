@@ -16,7 +16,7 @@ function inputClear() {
 }
 
 let refresh = () => {
-    tab = ['Bob', 'Julien', 'Roger'];
+    tab = ['Bob', 'John', 'Will'];
     list.innerHTML = "";
     afficherListe();
 }

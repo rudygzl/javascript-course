@@ -1,11 +1,11 @@
 let turn = 0;
 let resetMorpion = document.getElementById("jeu").innerHTML;
 
-function resetNoughts () {
-document.getElementById("jeu").innerHTML = resetMorpion;
+function resetNoughts() {
+    document.getElementById("jeu").innerHTML = resetMorpion;
 }
 
-function isOdd (num) {
+function isOdd(num) {
     return num % 2;
 }
 
@@ -42,102 +42,102 @@ function selectGameDiv(e) {
     let x3y1player2 = document.getElementById("x3y1").classList.contains("player2");
     let x3y2player2 = document.getElementById("x3y2").classList.contains("player2");
     let x3y3player2 = document.getElementById("x3y3").classList.contains("player2");
-    
 
-    if (x1y1player1 && x1y2player1 && x1y3player1){
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+
+    if (x1y1player1 && x1y2player1 && x1y3player1) {
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x2y1player1 && x2y2player1 && x2y3player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x3y1player1 && x3y2player1 && x3y3player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x1y1player1 && x2y1player1 && x3y1player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x3y1player1 && x3y2player1 && x3y3player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x1y3player1 && x2y3player1 && x3y3player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x1y2player1 && x2y2player1 && x3y2player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x1y1player1 && x2y2player1 && x3y3player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else if (x3y1player1 && x2y2player1 && x1y3player1) {
-        setTimeout(function(){
-            alert("Joueur 1 a gagné !");
+        setTimeout(function () {
+            alert("Player 1 wins!");
             resetNoughts();
-        },10);
+        }, 10);
     } else {
-        if (x1y1player2 && x1y2player2 && x1y3player2){
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+        if (x1y1player2 && x1y2player2 && x1y3player2) {
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x2y1player2 && x2y2player2 && x2y3player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x3y1player2 && x3y2player2 && x3y3player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x1y1player2 && x2y1player2 && x3y1player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x3y1player2 && x3y2player2 && x3y3player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x1y3player2 && x2y3player2 && x3y3player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x1y2player2 && x2y2player2 && x3y2player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x1y1player2 && x2y2player2 && x3y3player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         } else if (x3y1player2 && x2y2player2 && x1y3player2) {
-            setTimeout(function(){
-                alert("Joueur 2 a gagné !");
+            setTimeout(function () {
+                alert("Player 2 wins!");
                 resetNoughts();
-            },10);
+            }, 10);
         }
     }
-    
+
 }
 
 game.onclick = selectGameDiv;
