@@ -60,7 +60,7 @@ function removeCase() {
         }, 2000);
     } else {
         alertBox2.classList.remove("hidden");
-        alert2("Il doit rester au moins une case");
+        error2("Il doit rester au moins une case");
         setTimeout(function () {
             alertBox2.classList.add("hidden");
         }, 3000);

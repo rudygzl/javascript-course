@@ -38,7 +38,7 @@
     </div>
   </nav>
   <div id="links">
-    <div class="hidden lg:hidden flex w-full bg-blue-800 p-5 border border-blue-500 border-l-none border-r-none border-b-none static">
+    <div class="hidden lg:hidden flex w-full bg-blue-800 p-5 static">
       <div class="flex justify-around text-md w-full lg:hidden">
         <a href="#" class="nav-links lg:block lg:inline-block">Home</a>
         <a href="#" class="nav-links lg:block lg:inline-block">Discover</a>
@@ -49,6 +49,8 @@
   <div class="container mt-4">
     <button id="tableExoBtn" onclick="shown(tableExo)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Table</button>
     <button id="tableExoBtn2" onclick="shown(tableExo2)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Carousel</button>
+    <button id="tableExoBtn3" onclick="shown(tableExo3)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Contact</button>
+    <button id="tableExoBtn4" onclick="shown(tableExo4)" class="btn btn-blue mx-4 w-5/12 md:w-auto">Noughts and Crosses</button>
     <div id="tableExo" class="hidden">
       <div class="flex justify-center mx-auto mt-5">
         <button id="ajouter" onclick="addUser(); inputClear();" class="btn btn-blue mx-4">
@@ -88,16 +90,41 @@
       </div>
       <div class="flex justify-center mx-auto mt-5"><button class="btn btn-blue mx-4 w-1/12" onclick="removeCase()"
           id="removeCase">-</button></div>
+      <div class="flex justify-center mx-auto mt-5" id="infoCarousel"></div>
+      <div id="errorAlert2"
+        class="hidden block border flex flex-wrap border-red-800 mt-5 bg-red-200 mx-auto w-2/5 py-4 rounded text-red-800 px-5 shadow-lg">
+      </div>
     </div>
-    <div class="flex justify-center mx-auto mt-5" id="infoCarousel"></div>
-    <div id="errorAlert2"
-      class="hidden block border flex flex-wrap border-red-800 mt-5 bg-red-200 mx-auto w-2/5 py-4 rounded text-red-800 px-5 shadow-lg">
+    <div id="tableExo3" class="hidden">
+      <div class="flex justify-center mx-auto mt-5"><input class="p-1 rounded border border-blue-900 h-full"
+          id="nomInput" placeholder="nom" /><input class="p-1 rounded border border-blue-900 h-full" id="prenomInput"
+          placeholder="prenom" /><input class="p-1 rounded border border-blue-900 h-full" id="numeroInput"
+          placeholder="numero" /></div><button class="btn btn-blue mx-4 noselect" onclick="addFriend()">Add</button>
     </div>
-  </div>
+    <div id="tableExo4" class="hidden">
+      <div id="jeu" class="flex justify-center mx-auto mt-5">
+          <div class="w-4/12"> <!--Première Colonne--> 
+          <div id="x1y1" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Première Ligne--> 
+          <div id="x1y2" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Deuxième Ligne-->
+          <div id="x1y3" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Troisième ligne-->
+        </div>
+        <div class="w-4/12"> <!--Deuxième Colonne--> 
+          <div id="x2y1" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Première Ligne--> 
+          <div id="x2y2" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Deuxième Ligne--> 
+          <div id="x2y3" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Troisième Ligne--> 
+        </div>
+        <div class="w-4/12"> <!--Troisième Colonne--> 
+          <div id="x3y1" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Première Ligne--> 
+          <div id="x3y2" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Deuxième Ligne--> 
+          <div id="x3y3" class="game flex flex-wrap border border-black bg-blue-800 h-56"></div> <!--Troisième Ligne--> 
+      </div>
+    </div>
   </div>
   <script src="../src/main.js"></script>
   <script src="../src/table.js"></script>
   <script src="../src/carousel.js"></script>
+  <script src="../src/contact.js"></script>
+  <script src="../src/morpion.js"></script>
 </body>
 
 </html>

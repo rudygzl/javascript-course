@@ -41,7 +41,7 @@ let addUser = () => {
     let user = document.getElementById('texte').value;
     if (isEmptyOrSpaces(user)) {
         alertBox.classList.remove("hidden");
-        alert("Vous ne pouvez pas rentrer de caractères vides");
+        error("Vous ne pouvez pas rentrer de caractères vides");
         setTimeout(function () {
             alertBox.classList.add("hidden");
         }, 3000);
